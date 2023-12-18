@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ff0000">
+    <meta name="theme-color" content="#ffffff">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="/manifest.json">
+
+    <title>Task Reminder PWA</title>
+</head>
+
+
+<body>
+    
+    <header>
+        
+        <h1>Task Reminder</h1>
+    </header>
+
+    <img src="icons/pic.png" class="twinkling-image" alt="Twinkling Image">
+
+    <main>
+
+        <section id="taskForm">
+            <form id="taskForm"> 
+                <input type="text" id="newTask" placeholder="Enter a new task..." required>
+                <button type="submit">Add Task</button> 
+               
+                <input type="date" id="startTime" required>
+                <input type="time" id="startTimeTime" required>
+                <input type="date" id="endTime" required>
+                <input type="time" id="endTimeTime" required>
+                
+                <label for="notificationCheckbox">Notify me</label>
+                <input type="checkbox" id="notificationCheckbox">
+            </form>
+           
+
+        </section>
+
+        <section id="message-box">
+            <p id="offline-message" hidden>You are offline. The changes will be synced once you're back online.</p>
+        </section>
+
+        <ol id="taskList">
+            <ul>
+              
+            </ul>
+        </ol>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Task Reminder PWA</p>
+
+        <p>
+            Reminder icons created by 
+            <a href="https://www.flaticon.com/free-icons/reminder" title="reminder icons">Freepik - Flaticon</a>
+        </p>
+    </footer>
+        
+
+   
+    <script type="text/template" id="task-item-template">
+        <li class="task-item" data-task-id="{{id}}">
+            <span class="task-content">{{taskContent}}</span>
+            <button class="delete-task">Delete</button>
+        </li>
+    </script>
+
+    <script src="app.js"></script>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+</body>
+
+
+
+</html>

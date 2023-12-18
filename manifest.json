@@ -37,7 +37,14 @@
         {
             "src": "/icons/safari-pinned-tab.svg",
             "color": "#5bbad5"
+        },
+        {
+            "src": "/icons/maskable_icon.png", 
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
         }
+
     ],
     "start_url": "index.html",
     "scope": "/",
